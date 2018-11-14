@@ -1,0 +1,2 @@
+This project is a simple Flask hello world for ECS Fargate deployment.
+It is being used to test the AWS code pipleline.
