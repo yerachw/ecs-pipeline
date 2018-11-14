@@ -1,0 +1,6 @@
+VPC:  vpc-0c5a043227f2699b9
+PublicSubnets: subnet-0cbd0225ebb03f6af, subnet-0366becb955178c5b
+PublicSG: sg-050c74c95c6e98028
+ClusterName: ecs-hello
+LoadBalancerDNS: ecs-hello-902256430.us-east-1.elb.amazonaws.com
+TargetGroup: arn:aws:elasticloadbalancing:us-east-1:021222724407:targetgroup/ecs-hello/04cf4e0d5588b802

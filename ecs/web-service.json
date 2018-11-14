@@ -1,0 +1,31 @@
+{
+    "cluster": "ecs-hello",
+    "serviceName": "ecs-hello",
+    "taskDefinition": "ecs-hello",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:021222724407:targetgroup/ecs-hello/04cf4e0d5588b802",
+            "containerName": "web",
+            "containerPort": 80
+        }
+    ],
+    "launchType": "FARGATE",
+    "desiredCount": 1,
+    "deploymentConfiguration": {
+        "maximumPercent": 100,
+        "minimumHealthyPercent": 0
+    },
+    "healthCheckGracePeriodSeconds": 300,
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                "subnet-0cbd0225ebb03f6af",
+                "subnet-0366becb955178c5b"
+            ],
+            "securityGroups": [
+                "sg-050c74c95c6e98028"
+            ],
+            "assignPublicIp": "ENABLED"
+        }
+    }
+}
