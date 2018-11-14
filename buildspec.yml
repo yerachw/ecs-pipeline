@@ -7,9 +7,10 @@ phases:
       - aws --version
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email --profile sandbox)
       - REPOSITORY_URI=021222724407.dkr.ecr.us-east-1.amazonaws.com/ecs-hello
-      - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
-      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
-      - IMAGE_TAG=${COMMIT_HASH:=latest}
+      # - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
+      # - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      # - IMAGE_TAG=${COMMIT_HASH:=latest}
+      IMAGE_TAG=latest
   build:
     commands:
       - echo Build started on `date`
