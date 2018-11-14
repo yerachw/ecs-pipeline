@@ -10,7 +10,7 @@ phases:
       # - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
       # - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       # - IMAGE_TAG=${COMMIT_HASH:=latest}
-      IMAGE_TAG=latest
+      - IMAGE_TAG=latest
   build:
     commands:
       - echo Build started on `date`
